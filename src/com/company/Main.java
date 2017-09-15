@@ -9,7 +9,23 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Type in your VIN, odometer, consumption, odometer sense your last oil change, and engine size in liters");
-        String in = input.nextLine();
+
+        String[] prompt =
+                {
+                        "VIN number",
+                        "odometer number",
+                        "gas consumption",
+                        "odometer sense your last oil change",
+                        "engine size in liters"
+                };
+        boolean inputFinished = false;
+        int counter = 0;
+
+        while(counter != prompt.length){
+            System.out.println(prompt[counter]);
+            String in = input.nextLine();
+            counter++;
+        }
+
     }
 }
