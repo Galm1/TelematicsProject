@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -18,12 +19,14 @@ public class Main {
                         "odometer sense your last oil change",
                         "engine size in liters"
                 };
-        boolean inputFinished = false;
         int counter = 0;
+
+        String[] userIn = new String[5];
 
         while(counter != prompt.length){
             System.out.println(prompt[counter]);
             String in = input.nextLine();
+            userIn.push(in);
             counter++;
         }
 
