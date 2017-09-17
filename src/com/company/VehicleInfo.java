@@ -3,21 +3,21 @@ package com.company;
 public class VehicleInfo {
 
 
-    int VIN;
+    double VIN;
     double odometer;
     double consumption;
     double odometerSenseLastOilChange;
     double engineSize;
 
-    public VehicleInfo(int VIN, double odometer, double consumption, double odometerSenseLastOilChange, double engineSize) {
+    public VehicleInfo() {
 
     }
 
-    public int getVIN() {
+    public double getVIN() {
         return VIN;
     }
 
-    public void setVIN(int VIN) {
+    public void setVIN(double VIN) {
         this.VIN = VIN;
     }
 
@@ -52,4 +52,5 @@ public class VehicleInfo {
     public void setEngineSize(double engineSize) {
         this.engineSize = engineSize;
     }
+
 }

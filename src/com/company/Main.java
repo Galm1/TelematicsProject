@@ -12,6 +12,7 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
+        VehicleInfo newVehicle = new VehicleInfo();
 
         String[] prompt =
                 {
@@ -21,15 +22,15 @@ public class Main {
                         "odometer sense your last oil change",
                         "engine size in liters"
                 };
+        // figure out reflection to make a pseudo array of methods
+        double[] setArray = {new newVehicle.setVIN(), };
         int counter = 0;
 
-        String[] userIn = new String[5];
-
         while(counter != prompt.length){
+
             System.out.println(prompt[counter]);
             String in = input.nextLine();
-            // use your set methods in VehicleInfo!!!
-            userIn.push(in);
+            newVehicle.
             counter++;
         }
 
