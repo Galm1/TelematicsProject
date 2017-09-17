@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -26,6 +28,7 @@ public class Main {
         while(counter != prompt.length){
             System.out.println(prompt[counter]);
             String in = input.nextLine();
+            // figure out how to take the user input and use the data as the parameters
             userIn.push(in);
             counter++;
         }
