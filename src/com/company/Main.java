@@ -28,7 +28,7 @@ public class Main {
         while(counter != prompt.length){
             System.out.println(prompt[counter]);
             String in = input.nextLine();
-            // figure out how to take the user input and use the data as the parameters
+            // use your set methods in VehicleInfo!!!
             userIn.push(in);
             counter++;
         }
