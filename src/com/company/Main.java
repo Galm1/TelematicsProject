@@ -30,7 +30,6 @@ public class Main {
 
             System.out.println(prompt[counter]);
             String in = input.nextLine();
-            newVehicle.
             counter++;
         }
 
