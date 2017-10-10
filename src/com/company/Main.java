@@ -14,24 +14,21 @@ public class Main {
         Scanner input = new Scanner(System.in);
         VehicleInfo newVehicle = new VehicleInfo();
 
-        String[] prompt =
-                {
-                        "VIN number",
-                        "odometer number",
-                        "gas consumption",
-                        "odometer sense your last oil change",
-                        "engine size in liters"
-                };
-        // figure out reflection to make a pseudo array of methods
-        double[] setArray = {new newVehicle.setVIN(), };
-        int counter = 0;
+        System.out.println("Enter you VIN");
+        newVehicle.setVIN(Double.parseDouble(input.next()));
 
-        while(counter != prompt.length){
+        System.out.println("Enter you Odometer");
+        newVehicle.setOdometer(Double.parseDouble(input.next()));
 
-            System.out.println(prompt[counter]);
-            String in = input.nextLine();
-            counter++;
-        }
+        System.out.println("Enter your gas consumption");
+        newVehicle.setConsumption(Double.parseDouble(input.next()));
+
+        System.out.println("Enter odometer sense last oil change");
+        newVehicle.setOdometerSenseLastOilChange(Double.parseDouble(input.next()));
+
+        System.out.println("Enter your engine size");
+        newVehicle.setEngineSize(Double.parseDouble(input.next()));
+
 
     }
 }

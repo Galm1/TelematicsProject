@@ -1,12 +1,14 @@
 package com.company;
 
+import java.util.Date;
+
 public class VehicleInfo {
 
 
     double VIN;
     double odometer;
     double consumption;
-    double odometerSenseLastOilChange;
+    Date odometerSenseLastOilChange;
     double engineSize;
 
     public VehicleInfo() {
@@ -37,11 +39,11 @@ public class VehicleInfo {
         this.consumption = consumption;
     }
 
-    public double getOdometerSenseLastOilChange() {
+    public Date getOdometerSenseLastOilChange() {
         return odometerSenseLastOilChange;
     }
 
-    public void setOdometerSenseLastOilChange(double odometerSenseLastOilChange) {
+    public void setOdometerSenseLastOilChange(Date odometerSenseLastOilChange) {
         this.odometerSenseLastOilChange = odometerSenseLastOilChange;
     }
 
