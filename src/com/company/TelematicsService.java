@@ -18,6 +18,15 @@ public class TelematicsService {
         Date currentDate = new Date();
         vehicleInfo.setOdometerSenseLastOilChange(currentDate);
 
+        try {
+            FileWriter fileWriter = new FileWriter(newFile);
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(vehicleInfo);
+            fileWriter.write(json);
+            fileWriter.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }
 
