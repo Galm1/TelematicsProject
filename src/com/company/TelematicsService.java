@@ -68,6 +68,12 @@ public class TelematicsService {
             totalEngineSize += vehicle.getEngineSize();
             totalMPG += vehicle.calculateMilesPerGallon();
         }
+
+        averageOdometer = totalOdometer / vehicles.size();
+        averageCunsumption = totalCunsumption / vehicles.size();
+        averageOdometerAtLastOilChange = totalOdometerAtLastOilChange / vehicles.size();
+        averageEngineSize = totalEngineSize / vehicles.size();
+        averageMPG = totalMPG / vehicles.size();
     }
 }
 
