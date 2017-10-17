@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -88,6 +89,14 @@ public class TelematicsService {
             System.out.println("Could not find file *" + file + "*");
             ex.printStackTrace();
         }
+
+        DecimalFormat df = new DecimalFormat("#.#");
+        fileContents = fileContents.replace("numVehicles", String.valueOf(vehicles.size()));
+        fileContents = fileContents.replace("aveOdometer", df.format(averageOdometer).toString());
+        fileContents = fileContents.replace("aveConsumption", df.format(averageCunsumption).toString());
+        fileContents = fileContents.replace("aveLastOilChange", df.format(averageOdometerAtLastOilChange).toString());
+        fileContents = fileContents.replace("aveEngineSize", df.format(averageEngineSize).toString());
+        fileContents = fileContents.replace("aveMPG", df.format(averageMPG).toString());
     }
 }
 
