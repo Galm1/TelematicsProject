@@ -48,6 +48,18 @@ public class TelematicsService {
                 }
             }
         }
+
+        Double totalOdometer = 0.0;
+        Double totalGallonsOfGasConsumed = 0.0;
+        Double totalOdometerAtLastOilChange = 0.0;
+        Double totalEngineSize = 0.0;
+        Double totalMPG = 0.0;
+
+        Double averageOdometer = 0.0;
+        Double averageGallonsOfGasConsumed = 0.0;
+        Double averageOdometerAtLastOilChange = 0.0;
+        Double averageEngineSize = 0.0;
+        Double averageMPG = 0.0;
     }
 }
 
