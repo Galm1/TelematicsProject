@@ -113,6 +113,17 @@ public class TelematicsService {
         }
 
         fileContents = fileContents.replace("vehicleDataRows", vehicleDataRows);
+
+        filename = "index.html";
+        newFile = new File(filename);
+
+        try {
+            FileWriter fileWriter = new FileWriter(newFile);
+            fileWriter.write(fileContents);
+            fileWriter.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }
 
