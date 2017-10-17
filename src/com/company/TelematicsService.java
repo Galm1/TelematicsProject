@@ -18,7 +18,7 @@ public class TelematicsService {
         File newFile = new File(filename);
 
         Date currentDate = new Date();
-        vehicleInfo.setOdometerSenseLastOilChange(currentDate);
+        vehicleInfo.setDateOfService(currentDate);
 
         try {
             FileWriter fileWriter = new FileWriter(newFile);

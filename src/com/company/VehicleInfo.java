@@ -8,8 +8,9 @@ public class VehicleInfo {
     double VIN;
     double odometer;
     double consumption;
-    Date odometerSenseLastOilChange;
+    double odometerSenseLastOilChange;
     double engineSize;
+    Date dateOfService;
 
     public VehicleInfo() {
 
@@ -39,11 +40,11 @@ public class VehicleInfo {
         this.consumption = consumption;
     }
 
-    public Date getOdometerSenseLastOilChange() {
+    public double getOdometerSenseLastOilChange() {
         return odometerSenseLastOilChange;
     }
 
-    public void setOdometerSenseLastOilChange(Date odometerSenseLastOilChange) {
+    public void setOdometerSenseLastOilChange(double odometerSenseLastOilChange) {
         this.odometerSenseLastOilChange = odometerSenseLastOilChange;
     }
 
@@ -53,6 +54,14 @@ public class VehicleInfo {
 
     public void setEngineSize(double engineSize) {
         this.engineSize = engineSize;
+    }
+
+    public Date getDateOfService() {
+        return dateOfService;
+    }
+
+    public void setDateOfService(Date dateOfService) {
+        this.dateOfService = dateOfService;
     }
 
 }
