@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 
 public class TelematicsService {
@@ -74,6 +75,19 @@ public class TelematicsService {
         averageOdometerAtLastOilChange = totalOdometerAtLastOilChange / vehicles.size();
         averageEngineSize = totalEngineSize / vehicles.size();
         averageMPG = totalMPG / vehicles.size();
+
+        file = new File ("index.template");
+        String fileContents = new String();
+        try {
+            Scanner fileScanner = new Scanner(file);
+            while (fileScanner.hasNext()) {
+                fileContents += fileScanner.nextLine() + "\n";
+            }
+        }
+        catch (FileNotFoundException ex) {
+            System.out.println("Could not find file *" + file + "*");
+            ex.printStackTrace();
+        }
     }
 }
 
