@@ -64,4 +64,8 @@ public class VehicleInfo {
         this.dateOfService = dateOfService;
     }
 
+    public Double calculateMilesPerGallon() {
+        return odometer / consumption;
+    }
+
 }
