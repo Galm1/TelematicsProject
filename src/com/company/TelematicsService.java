@@ -97,6 +97,22 @@ public class TelematicsService {
         fileContents = fileContents.replace("aveLastOilChange", df.format(averageOdometerAtLastOilChange).toString());
         fileContents = fileContents.replace("aveEngineSize", df.format(averageEngineSize).toString());
         fileContents = fileContents.replace("aveMPG", df.format(averageMPG).toString());
+
+        String vehicleDataRows = "";
+
+        for( VehicleInfo vehicle: vehicles ) {
+            vehicleDataRows += "<tr>";
+            vehicleDataRows += "<td>" + vehicle.getDateOfService() + "</td>";
+            vehicleDataRows += "<td>" + df.format(vehicle.getVIN()) + "</td>";
+            vehicleDataRows += "<td>" + df.format(vehicle.getOdometer()) + "</td>";
+            vehicleDataRows += "<td>" + df.format(vehicle.getConsumption()) + "</td>";
+            vehicleDataRows += "<td>" + df.format(vehicle.getOdometerSenseLastOilChange()) + "</td>";
+            vehicleDataRows += "<td>" + df.format(vehicle.getEngineSize()) + "</td>";
+            vehicleDataRows += "<td>" + df.format(vehicle.calculateMilesPerGallon()) + "</td>";
+            vehicleDataRows += "</tr>";
+        }
+
+        fileContents = fileContents.replace("vehicleDataRows", vehicleDataRows);
     }
 }
 
