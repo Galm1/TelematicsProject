@@ -27,6 +27,9 @@ public class Main {
         System.out.println("Enter your engine size");
         newVehicle.setEngineSize(Double.parseDouble(input.next()));
 
+        TelematicsService telematicsService = new TelematicsService();
+        telematicsService.report(newVehicle);
+
 
     }
 }

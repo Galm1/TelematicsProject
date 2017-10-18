@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class TelematicsService {
 
-    public void report(VehicleInfo vehicleInfo) throws IOException {
+    public void report(VehicleInfo vehicleInfo){
 
         String filename = vehicleInfo.getVIN() + ".json";
         File newFile = new File(filename);
