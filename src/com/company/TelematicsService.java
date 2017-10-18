@@ -1,6 +1,5 @@
 package com.company;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -52,27 +51,27 @@ public class TelematicsService {
         }
 
         Double totalOdometer = 0.0;
-        Double totalCunsumption = 0.0;
+        Double totalConsumption = 0.0;
         Double totalOdometerAtLastOilChange = 0.0;
         Double totalEngineSize = 0.0;
         Double totalMPG = 0.0;
 
         Double averageOdometer = 0.0;
-        Double averageCunsumption = 0.0;
+        Double averageConsumption = 0.0;
         Double averageOdometerAtLastOilChange = 0.0;
         Double averageEngineSize = 0.0;
         Double averageMPG = 0.0;
 
         for( VehicleInfo vehicle: vehicles ) {
             totalOdometer += vehicle.getOdometer();
-            totalCunsumption += vehicle.getConsumption();
+            totalConsumption += vehicle.getConsumption();
             totalOdometerAtLastOilChange += vehicle.getOdometerSenseLastOilChange();
             totalEngineSize += vehicle.getEngineSize();
             totalMPG += vehicle.calculateMilesPerGallon();
         }
 
         averageOdometer = totalOdometer / vehicles.size();
-        averageCunsumption = totalCunsumption / vehicles.size();
+        averageConsumption = totalConsumption / vehicles.size();
         averageOdometerAtLastOilChange = totalOdometerAtLastOilChange / vehicles.size();
         averageEngineSize = totalEngineSize / vehicles.size();
         averageMPG = totalMPG / vehicles.size();
@@ -93,7 +92,7 @@ public class TelematicsService {
         DecimalFormat df = new DecimalFormat("#.#");
         fileContents = fileContents.replace("numVehicles", String.valueOf(vehicles.size()));
         fileContents = fileContents.replace("aveOdometer", df.format(averageOdometer).toString());
-        fileContents = fileContents.replace("aveConsumption", df.format(averageCunsumption).toString());
+        fileContents = fileContents.replace("aveConsumption", df.format(averageConsumption).toString());
         fileContents = fileContents.replace("aveLastOilChange", df.format(averageOdometerAtLastOilChange).toString());
         fileContents = fileContents.replace("aveEngineSize", df.format(averageEngineSize).toString());
         fileContents = fileContents.replace("aveMPG", df.format(averageMPG).toString());
